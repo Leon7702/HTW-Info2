@@ -1,16 +1,9 @@
 package lab10;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Polygon;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class Main extends JFrame {
 	

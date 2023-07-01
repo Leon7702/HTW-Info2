@@ -33,16 +33,27 @@ class WeightedGraph {
 
     public void removeVertex(int vertex) {
         adjacencyList.remove(vertex);
-        // Remove edges containing the vertex
         for (List<Edge> edges : adjacencyList.values()) {
-            edges.removeIf(edge -> edge.getDestination() == vertex);
+            Iterator<Edge> iterator = edges.iterator();
+            while (iterator.hasNext()) {
+                Edge edge = iterator.next();
+                if (edge.getDestination() == vertex) {
+                    iterator.remove();
+                }
+            }
         }
     }
 
     public void removeEdge(int source, int destination) {
         List<Edge> edges = adjacencyList.get(source);
         if (edges != null) {
-            edges.removeIf(edge -> edge.getDestination() == destination);
+            Iterator<Edge> iterator = edges.iterator();
+            while (iterator.hasNext()) {
+                Edge edge = iterator.next();
+                if (edge.getDestination() == destination) {
+                    iterator.remove();
+                }
+            }
         }
     }
 

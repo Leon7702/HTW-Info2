@@ -31,11 +31,11 @@ public class HashTable {
     }
 
     private int hash(String key) {
-        String normalizedKey = normalize(key);
-        return Math.floorMod(normalizedKey.hashCode(), capacity);
+        return Math.floorMod(Integer.parseInt(key), capacity);
     }
     public void put(String value) {
-        String key = Integer.toString(value.hashCode());
+        String normalizedWord = normalize(value);
+        String key = Integer.toString(normalizedWord.hashCode());
         int index = hash(key);
         LinkedList<Node> listOfNodes = table[index];
 

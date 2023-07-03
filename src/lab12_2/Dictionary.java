@@ -67,8 +67,9 @@ public class Dictionary {
 
     public static void main(String[] args) {
         Dictionary dict = new Dictionary(45000);
-        dict.generateDict("/Users/leon/Documents/HTW/Info2/HTW-Info2/src/lab12_2/words.txt");
+        dict.generateDict("/Users/leon/Documents/HTW/Info2/HTW-Info2/src/lab12_2/newWordList");
         dict.printTable();
+        System.out.println(dict.getLongestChain());
 
 
 
